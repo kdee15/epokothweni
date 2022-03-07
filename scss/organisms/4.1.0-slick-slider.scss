@@ -1,0 +1,62 @@
+// ORGANISM [ SLICK SLIDER ] ##########################################################################################
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. SLIDER BASE STYLES --------------------------------
+
+.slick-slider { width: 100%; overflow: hidden;
+  .slick-track { display: flex !important; }
+  .slick-arrow { @include vertical-align(absolute);
+    &.slick-prev { left: -50px; }
+    &.slick-next { right: -50px; }
+  }
+  .slick-dots { list-style-type: none; margin: 0; padding: 0; display: block; text-align: center;
+    li { display: inline-block; width: 10px; height: 10px; margin-left: 10px; border-radius: 10px; background: white;
+      button { display: block; @include position(absolute, 0); opacity: 0; }
+      &:first-child { margin-left: 0; }
+      &:hover,
+      &.slick-active { box-shadow: 0 0 5px black; }
+    }
+  }
+  .slick-slide { height: inherit !important; padding: 50px 20px;
+    * { color: white; text-align: center; }
+    .aTitle { margin-bottom: 30px; }
+    .aText { margin-bottom: 20px; }
+    &:nth-child(4n+1) { background-color: #4B2653; }
+    &:nth-child(4n+2) { background-color: #4D4D4D; }
+    &:nth-child(4n+3) { background-color: #4E5616; }
+    &:nth-child(4n+4) { background-color: #4D4D4D; }
+  }
+}
+
+// A.1. END -----------------------------------------------
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-dn) {}
+
+@media ($sm-dn) {}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

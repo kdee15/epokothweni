@@ -1,0 +1,64 @@
+// COMPONENT [ CONTENT BLOCK ] ########################################################################################
+@import "../../../scss/.base/module-index";
+
+.oPodcastCard {
+
+  // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+  .mCardImage { background-size: cover; background-position: center; width: 100%;
+    span { display: block; @include aspect-ratio(100%, 75%);}
+  }
+
+  .mCardBody { background-color: $grey; width: 100%; padding: 30px 20px;
+    .aTitle { margin-bottom: 15px; }
+    .mText { margin-bottom: 20px; }
+    .mContentWrapper { display: block; }
+    .mTextIconLink { margin-right: 15px;
+      .aLinkIcon { width: 20px; display: inline-block; vertical-align: middle; margin-right: 8px;
+        path { fill: white; }
+      }
+      .aLinkText { display: inline-block; vertical-align: middle; color: white; }
+    }
+  }
+
+  // A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+  @media ($md-dn) {}
+
+  @media ($sm-dn) {}
+
+  // B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+  @media ($sm-up) {
+
+    display: flex;
+
+    .mCardImage { flex: 1 1 40%; width: 40%;
+      span { @include aspect-ratio(100%, 100%);}
+    }
+
+    .mCardBody { flex: 1 1 60%; width: 60%; }
+
+  }
+
+  // C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+  @media ($md-up) {}
+
+  // D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+  @media ($lg-up) {}
+
+  // E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+}
+
+// END OF FILE ########################################################################################################

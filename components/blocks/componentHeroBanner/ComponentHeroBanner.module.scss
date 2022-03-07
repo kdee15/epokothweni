@@ -1,0 +1,78 @@
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
+@import "scss/.base/module-index";
+
+.oHeroBlock {
+  // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .oContentRow {
+    max-height: 600px;
+    @include aspect-ratio(auto, 56.5%);
+  }
+  .oContentBlock {
+    align-self: center;
+    .mImage {
+      max-width: 50%;
+      margin: 0 0 0 auto;
+    }
+    .aImage {
+      margin: 0 0 50px auto;
+      display: block;
+    }
+    .aText {
+      text-align: center;
+    }
+  }
+
+  .dog-turd {
+    p {
+      color: red !important;
+    }
+  }
+
+  // A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+  @media ($md-dn) {
+  }
+
+  @media ($sm-dn) {
+  }
+
+  // B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+  @media ($sm-up) {
+    .oContentBlock {
+      .mImage {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .aImage {
+        margin: 20px auto;
+      }
+    }
+  }
+
+  // C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+  @media ($md-up) {
+  }
+
+  // D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+  @media ($lg-up) {
+  }
+
+  // E. END +++++++++++++++++++++++++++++++++++++++++++++++
+}
+
+// END OF FILE ########################################################################################################

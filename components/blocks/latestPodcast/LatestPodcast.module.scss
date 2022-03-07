@@ -1,0 +1,129 @@
+// COMPONENT [ LATEST PODCAST ] #######################################################################################
+
+@import "scss/.base/module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.aArrowIcon {
+  path {
+    fill: $green;
+  }
+}
+
+.oLatestPodcastBlock {
+  padding: 50px 0;
+  .aBlockTitle {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .aPodcastIcon {
+    display: inline-block;
+    vertical-align: middle;
+    path {
+      fill: $green;
+    }
+  }
+  .aArrowIcon {
+    width: 150px;
+    transform: rotate(-90deg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 30px;
+  }
+  .oColFeatured {
+    order: 1;
+  }
+  .oColPodcasts {
+    order: 2;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .mPodcastsInfo {
+    padding: 30px;
+    text-align: center;
+    a {
+      padding: 15px 10px;
+      margin: 0 10px;
+      display: block;
+      &:first-child {
+        margin: 20px 10px;
+      }
+    }
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+@media ($sm-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+  .oLatestPodcastBlock {
+    .oColPodcasts {
+      padding-top: 0;
+    }
+    .aPodcastIcon {
+      max-width: 100px;
+      height: auto;
+    }
+    .aArrowIcon {
+      width: 150px;
+      transform: rotate(0deg);
+    }
+    .mPodcastsInfo {
+      margin-top: 50px;
+      a {
+        margin: 0 10px;
+        display: inline-block;
+        min-width: 250px;
+        &:first-child {
+          margin: 0 10px;
+        }
+      }
+    }
+    .oColFeatured {
+      order: 2;
+    }
+    .oColPodcasts {
+      order: 1;
+    }
+  }
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+  .oLatestPodcastBlock {
+    .oColPodcasts {
+      align-self: center;
+    }
+    .aPodcastIcon {
+      vertical-align: top;
+    }
+    .aArrowIcon {
+      vertical-align: top;
+    }
+  }
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
