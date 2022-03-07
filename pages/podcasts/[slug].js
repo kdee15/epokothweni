@@ -34,6 +34,5 @@ export async function getStaticProps({ params }) {
 }
 
 export default function RecipeDetails({ recipe }) {
-  console.log(recipe);
   return <div>Recipe Details: {recipe.fields.title}</div>;
 }
