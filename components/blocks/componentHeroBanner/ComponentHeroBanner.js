@@ -1,7 +1,6 @@
 import { createClient } from "contentful";
 import classes from "./ComponentHeroBanner.module.scss";
 import Image from "next/image";
-import { loaderProp } from "../../../helpers/contentful-config";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -22,14 +21,13 @@ function ComponentHeroBanner({ heroBanner }) {
             <figure className={classes.mImage}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
-                src={`http:${logo.fields.file.url}`}
+                src={`https:${logo.fields.file.url}`}
                 alt={`title`}
                 width={logo.fields.file.details.image.width}
                 height={logo.fields.file.details.image.height}
                 aria-hidden="true"
                 layout="responsive"
                 priority="true"
-                loader={loaderProp}
               />
             </figure>
             <ReactMarkdown className={`${classes.aText} a-fnt-18f`}>

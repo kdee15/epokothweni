@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { loaderProp } from "../../../helpers/contentful-config";
 import Link from "next/link";
 import classes from "./ComponentFooter.module.scss";
 
@@ -15,14 +14,13 @@ function Footer({ footer }) {
             <figure className={classes.aFooterLogo}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
-                src={`http:${logo.fields.file.url}`}
+                src={`https:${logo.fields.file.url}`}
                 alt={`title`}
                 width={logo.fields.file.details.image.width}
                 height={logo.fields.file.details.image.height}
                 aria-hidden="true"
                 layout="responsive"
                 priority="true"
-                loader={loaderProp}
               />
             </figure>
             <ul className={`${classes.oIconList} oFooterMenu`}>
@@ -41,7 +39,7 @@ function Footer({ footer }) {
                       <figure className={`${classes.mIcon} m-icon`}>
                         <Image
                           className={`${classes.aIcon} a-icon`}
-                          src={`http:${socialLink.image.fields.file.url}`}
+                          src={`https:${socialLink.image.fields.file.url}`}
                           alt={`title`}
                           width={
                             socialLink.image.fields.file.details.image.width
@@ -80,11 +78,10 @@ function Footer({ footer }) {
             <figure className={`${classes.mQRCode} mWhatsappQR`}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
-                src={`http:${qrCode.fields.file.url}`}
+                src={`https:${qrCode.fields.file.url}`}
                 alt={`Whatsapp QR Code`}
                 width={qrCode.fields.file.details.image.width}
                 height={qrCode.fields.file.details.image.height}
-                loader={loaderProp}
               />
             </figure>
             <p className={`${classes.aFooterText} aWhatsappText a-fnt-16s`}>

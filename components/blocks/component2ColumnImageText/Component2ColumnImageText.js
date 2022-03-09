@@ -1,6 +1,5 @@
 import { createClient } from "contentful";
 import Image from "next/image";
-import { loaderProp } from "../../../helpers/contentful-config";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import classes from "./Component2ColumnImageText.module.scss";
@@ -18,11 +17,10 @@ function Component2ColumnImageText({ contentModule }) {
           >
             <Image
               className={`${classes.aImage} a-responsive-image`}
-              src={`http:${image.fields.file.url}`}
+              src={`https:${image.fields.file.url}`}
               alt={``}
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}
-              loader={loaderProp}
             />
           </figure>
           <div className={`${classes.oBlockBody} oBlockBody col-12 col-md-7`}>

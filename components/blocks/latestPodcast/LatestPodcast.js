@@ -56,7 +56,7 @@ function LatestPodcast() {
               width="100%"
               height="232"
               frameBorder="0"
-              allowFullscreen=""
+              allowFullScreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             ></iframe>
           </div>

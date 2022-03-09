@@ -5,7 +5,3 @@ module.exports = {
   C_DELIVERY_KEY,
   C_SPACE_ID,
 };
-
-const loaderProp = ({ src }) => {
-  return src;
-};

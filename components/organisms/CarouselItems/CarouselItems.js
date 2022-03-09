@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./CarouselItems.module.scss";
 import Image from "next/image";
-import { loaderProp } from "../../../helpers/contentful-config";
 
 function CarouselItems(props) {
   const { title, image, copy } = props.contentModule;
@@ -10,12 +9,11 @@ function CarouselItems(props) {
       <div className={classes.oContent}>
         {title}
         <Image
-          src={`http://localhost:1337${image.url}`}
+          src={`https://localhost:1337${image.url}`}
           alt={title}
           className={`a-responsive-image`}
           width={image.width}
           height={image.height}
-          loader={loaderProp}
         />
         {copy}
       </div>
