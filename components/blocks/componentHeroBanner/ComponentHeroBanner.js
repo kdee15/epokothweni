@@ -28,6 +28,7 @@ function ComponentHeroBanner({ heroBanner }) {
                 aria-hidden="true"
                 layout="responsive"
                 priority="true"
+                loader={loaderProp}
               />
             </figure>
             <ReactMarkdown className={`${classes.aText} a-fnt-18f`}>

@@ -14,11 +14,12 @@ function CarouselItems(props) {
           className={`a-responsive-image`}
           width={image.width}
           height={image.height}
+          loader={loaderProp}
         />
         {copy}
       </div>
     </section>
-  )
+  );
 }
 
 export default CarouselItems;

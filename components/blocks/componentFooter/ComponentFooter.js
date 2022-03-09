@@ -21,6 +21,7 @@ function Footer({ footer }) {
                 aria-hidden="true"
                 layout="responsive"
                 priority="true"
+                loader={loaderProp}
               />
             </figure>
             <ul className={`${classes.oIconList} oFooterMenu`}>
@@ -82,6 +83,7 @@ function Footer({ footer }) {
                 alt={`Whatsapp QR Code`}
                 width={qrCode.fields.file.details.image.width}
                 height={qrCode.fields.file.details.image.height}
+                loader={loaderProp}
               />
             </figure>
             <p className={`${classes.aFooterText} aWhatsappText a-fnt-16s`}>

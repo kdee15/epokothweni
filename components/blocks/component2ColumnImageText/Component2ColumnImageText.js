@@ -21,6 +21,7 @@ function Component2ColumnImageText({ contentModule }) {
               alt={``}
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}
+              loader={loaderProp}
             />
           </figure>
           <div className={`${classes.oBlockBody} oBlockBody col-12 col-md-7`}>
