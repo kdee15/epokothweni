@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import Image from "next/image";
+import { loaderProp } from "../../../helpers/contentful-config";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import classes from "./Component2ColumnImageText.module.scss";

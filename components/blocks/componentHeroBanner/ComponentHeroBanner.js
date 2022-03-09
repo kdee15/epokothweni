@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import classes from "./ComponentHeroBanner.module.scss";
 import Image from "next/image";
+import { loaderProp } from "../../../helpers/contentful-config";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { loaderProp } from "../../../helpers/contentful-config";
 import Link from "next/link";
 import classes from "./ComponentFooter.module.scss";
 

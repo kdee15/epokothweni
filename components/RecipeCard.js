@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import loaderProp from "../helpers/contentful-config";
 
 export default function RecipeCard({ recipe }) {
   const { title, slug, cookingTime, thumbnail } = recipe.fields;
