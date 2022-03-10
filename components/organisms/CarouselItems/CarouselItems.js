@@ -9,7 +9,7 @@ function CarouselItems(props) {
       <div className={classes.oContent}>
         {title}
         <Image
-          src={`https://localhost:1337${image.url}`}
+          src={image.url}
           alt={title}
           className={`a-responsive-image`}
           width={image.width}

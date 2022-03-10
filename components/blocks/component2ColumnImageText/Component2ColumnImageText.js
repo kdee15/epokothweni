@@ -17,7 +17,7 @@ function Component2ColumnImageText({ contentModule }) {
           >
             <Image
               className={`${classes.aImage} a-responsive-image`}
-              src={`https:${image.fields.file.url}`}
+              src={image.fields.file.url}
               alt={``}
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}
