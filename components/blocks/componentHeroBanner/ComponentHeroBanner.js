@@ -21,7 +21,7 @@ function ComponentHeroBanner({ heroBanner }) {
             <figure className={classes.mImage}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
-                src={`http:${logo.fields.file.url}`}
+                src={logo.fields.file.url}
                 alt={`title`}
                 width={logo.fields.file.details.image.width}
                 height={logo.fields.file.details.image.height}

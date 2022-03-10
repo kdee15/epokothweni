@@ -14,7 +14,7 @@ function Footer({ footer }) {
             <figure className={classes.aFooterLogo}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
-                src={`http:${logo.fields.file.url}`}
+                src={logo.fields.file.url}
                 alt={`title`}
                 width={logo.fields.file.details.image.width}
                 height={logo.fields.file.details.image.height}
@@ -39,7 +39,7 @@ function Footer({ footer }) {
                       <figure className={`${classes.mIcon} m-icon`}>
                         <Image
                           className={`${classes.aIcon} a-icon`}
-                          src={`http:${socialLink.image.fields.file.url}`}
+                          src={`https:${socialLink.image.fields.file.url}`}
                           alt={`title`}
                           width={
                             socialLink.image.fields.file.details.image.width
@@ -78,7 +78,7 @@ function Footer({ footer }) {
             <figure className={`${classes.mQRCode} mWhatsappQR`}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
-                src={`http:${qrCode.fields.file.url}`}
+                src={`${qrCode.fields.file.url}`}
                 alt={`Whatsapp QR Code`}
                 width={qrCode.fields.file.details.image.width}
                 height={qrCode.fields.file.details.image.height}
