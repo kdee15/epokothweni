@@ -6,6 +6,7 @@ import classes from "./ComponentFooter.module.scss";
 function Footer({ footer }) {
   const { logo, qrCode, qrCodeText } = footer;
   const socialLinks = footer.socialMediaLinks;
+  console.log("socialLinks", socialLinks);
   return (
     <footer className={classes.oFooter}>
       <div className={`container`}>
@@ -25,7 +26,7 @@ function Footer({ footer }) {
             </figure>
             <ul className={`${classes.oIconList} oFooterMenu`}>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[0].fields.title}>
+                <Link href={socialLinks[0].fields.url}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
@@ -45,7 +46,7 @@ function Footer({ footer }) {
                 </Link>
               </li>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[1].fields.title}>
+                <Link href={socialLinks[1].fields.url}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
@@ -65,7 +66,7 @@ function Footer({ footer }) {
                 </Link>
               </li>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[2].fields.title}>
+                <Link href={socialLinks[2].fields.url}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
@@ -85,7 +86,7 @@ function Footer({ footer }) {
                 </Link>
               </li>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[3].fields.title}>
+                <Link href={socialLinks[3].fields.url}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
@@ -105,7 +106,7 @@ function Footer({ footer }) {
                 </Link>
               </li>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[4].fields.title}>
+                <Link href={socialLinks[4].fields.url}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
@@ -125,7 +126,7 @@ function Footer({ footer }) {
                 </Link>
               </li>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[5].fields.title}>
+                <Link href={socialLinks[5].fields.url}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
