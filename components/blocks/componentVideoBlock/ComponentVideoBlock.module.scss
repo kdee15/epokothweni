@@ -1,0 +1,71 @@
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
+@import "scss/.base/module-index";
+
+.oVideoBlock {
+  // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .aBlockTitle {
+    text-align: center;
+    width: 100%;
+  }
+  .blockWrapper {
+    @include aspect-ratio(100%, 56.5%);
+    position: relative;
+    margin: 30px auto 150px;
+  }
+
+  .mVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  // A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+  @media ($md-dn) {
+  }
+
+  @media ($sm-dn) {
+  }
+
+  // B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+  @media ($sm-up) {
+    .oContentBlock {
+      .mImage {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .aImage {
+        margin: 20px auto;
+      }
+    }
+  }
+
+  // C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+  @media ($md-up) {
+  }
+
+  // D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+  @media ($lg-up) {
+  }
+
+  // E. END +++++++++++++++++++++++++++++++++++++++++++++++
+}
+
+// END OF FILE ########################################################################################################
