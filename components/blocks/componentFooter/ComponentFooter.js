@@ -24,35 +24,26 @@ function Footer({ footer }) {
               />
             </figure>
             <ul className={`${classes.oIconList} oFooterMenu`}>
-              {socialLinks.map((socialLink) => (
-                <li
-                  key={socialLink.id}
-                  className={`${classes.mLinkItem} m-link-item`}
-                >
-                  <span>{socialLink.id}</span>
-                  {/* <Link href={socialLink.URL}>
-                    <a
-                      target={`_blank`}
-                      className={`${classes.mLink} m-link`}
-                      rel={`noopener`}
-                    >
-                      <figure className={`${classes.mIcon} m-icon`}>
-                        <Image
-                          className={`${classes.aIcon} a-icon`}
-                          src={`https:${socialLink.image.fields.file.url}`}
-                          alt={`title`}
-                          width={
-                            socialLink.image.fields.file.details.image.width
-                          }
-                          height={
-                            socialLink.image.fields.file.details.image.height
-                          }
-                        />
-                      </figure>
-                    </a>
-                  </Link> */}
-                </li>
-              ))}
+              <li className={`${classes.mLinkItem} m-link-item`}>
+                <Link href={`https://google.com`}>
+                  <a
+                    target={`_blank`}
+                    className={`${classes.mLink} m-link`}
+                    rel={`noopener`}
+                  >
+                    <figure className={`${classes.mIcon} m-icon`}>
+                      <Image
+                        className={`${classes.aIcon} a-icon`}
+                        src={`/socialmedia/icon_email.svg`}
+                        alt={`title`}
+                        width={`16px`}
+                        height={`16px`}
+                        layout="fixed"
+                      />
+                    </figure>
+                  </a>
+                </Link>
+              </li>
             </ul>
           </nav>
           <nav
