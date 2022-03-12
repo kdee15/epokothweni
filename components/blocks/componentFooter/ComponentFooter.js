@@ -25,7 +25,7 @@ function Footer({ footer }) {
             </figure>
             <ul className={`${classes.oIconList} oFooterMenu`}>
               <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={`https://google.com`}>
+                <Link href={socialLinks[0].fields.title}>
                   <a
                     target={`_blank`}
                     className={`${classes.mLink} m-link`}
@@ -34,11 +34,111 @@ function Footer({ footer }) {
                     <figure className={`${classes.mIcon} m-icon`}>
                       <Image
                         className={`${classes.aIcon} a-icon`}
-                        src={`/socialmedia/icon_email.svg`}
-                        alt={`title`}
+                        src={socialLinks[0].fields.image.fields.file.url}
+                        alt={socialLinks[0].fields.title}
                         width={`16px`}
                         height={`16px`}
-                        layout="fixed"
+                        layout="responsive"
+                      />
+                    </figure>
+                  </a>
+                </Link>
+              </li>
+              <li className={`${classes.mLinkItem} m-link-item`}>
+                <Link href={socialLinks[1].fields.title}>
+                  <a
+                    target={`_blank`}
+                    className={`${classes.mLink} m-link`}
+                    rel={`noopener`}
+                  >
+                    <figure className={`${classes.mIcon} m-icon`}>
+                      <Image
+                        className={`${classes.aIcon} a-icon`}
+                        src={socialLinks[1].fields.image.fields.file.url}
+                        alt={socialLinks[1].fields.title}
+                        width={`16px`}
+                        height={`16px`}
+                        layout="responsive"
+                      />
+                    </figure>
+                  </a>
+                </Link>
+              </li>
+              <li className={`${classes.mLinkItem} m-link-item`}>
+                <Link href={socialLinks[2].fields.title}>
+                  <a
+                    target={`_blank`}
+                    className={`${classes.mLink} m-link`}
+                    rel={`noopener`}
+                  >
+                    <figure className={`${classes.mIcon} m-icon`}>
+                      <Image
+                        className={`${classes.aIcon} a-icon`}
+                        src={socialLinks[2].fields.image.fields.file.url}
+                        alt={socialLinks[2].fields.title}
+                        width={`16px`}
+                        height={`16px`}
+                        layout="responsive"
+                      />
+                    </figure>
+                  </a>
+                </Link>
+              </li>
+              <li className={`${classes.mLinkItem} m-link-item`}>
+                <Link href={socialLinks[3].fields.title}>
+                  <a
+                    target={`_blank`}
+                    className={`${classes.mLink} m-link`}
+                    rel={`noopener`}
+                  >
+                    <figure className={`${classes.mIcon} m-icon`}>
+                      <Image
+                        className={`${classes.aIcon} a-icon`}
+                        src={socialLinks[3].fields.image.fields.file.url}
+                        alt={socialLinks[3].fields.title}
+                        width={`16px`}
+                        height={`16px`}
+                        layout="responsive"
+                      />
+                    </figure>
+                  </a>
+                </Link>
+              </li>
+              <li className={`${classes.mLinkItem} m-link-item`}>
+                <Link href={socialLinks[4].fields.title}>
+                  <a
+                    target={`_blank`}
+                    className={`${classes.mLink} m-link`}
+                    rel={`noopener`}
+                  >
+                    <figure className={`${classes.mIcon} m-icon`}>
+                      <Image
+                        className={`${classes.aIcon} a-icon`}
+                        src={socialLinks[4].fields.image.fields.file.url}
+                        alt={socialLinks[4].fields.title}
+                        width={`16px`}
+                        height={`16px`}
+                        layout="responsive"
+                      />
+                    </figure>
+                  </a>
+                </Link>
+              </li>
+              <li className={`${classes.mLinkItem} m-link-item`}>
+                <Link href={socialLinks[5].fields.title}>
+                  <a
+                    target={`_blank`}
+                    className={`${classes.mLink} m-link`}
+                    rel={`noopener`}
+                  >
+                    <figure className={`${classes.mIcon} m-icon`}>
+                      <Image
+                        className={`${classes.aIcon} a-icon`}
+                        src={socialLinks[5].fields.image.fields.file.url}
+                        alt={socialLinks[5].fields.title}
+                        width={`16px`}
+                        height={`16px`}
+                        layout="responsive"
                       />
                     </figure>
                   </a>

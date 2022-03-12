@@ -2,7 +2,6 @@ import classes from "./ComponentVideoBlock.module.scss";
 
 function ComponentVideoBlock({ contentModule }) {
   const { title, videoUrl } = contentModule;
-  console.log("where da vid?", contentModule);
   return (
     <section className={`${classes.oVideoBlock}`}>
       <div className={`${classes.oContainer} container`}>
