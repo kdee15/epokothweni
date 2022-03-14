@@ -12,8 +12,6 @@ export async function getStaticProps() {
     accessToken: C_DELIVERY_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "recipe" });
-
   const resBanner = await client.getEntries({
     content_type: "componentHeroBanner",
   });
@@ -27,7 +25,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      recipes: res.items,
       footer: resFooter.items[0].fields,
       heroBanner: resBanner.items[0].fields,
       videoBlockEng: resVideoBlock.items[0].fields,

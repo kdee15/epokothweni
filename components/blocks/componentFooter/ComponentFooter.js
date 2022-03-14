@@ -6,7 +6,9 @@ import classes from "./ComponentFooter.module.scss";
 function Footer({ footer }) {
   const { logo, qrCode, qrCodeText } = footer;
   const socialLinks = footer.socialMediaLinks;
-  console.log("socialLinks", socialLinks);
+  const menuLinks = footer.footerMenu;
+  console.log("menuLinks", menuLinks);
+
   return (
     <footer className={classes.oFooter}>
       <div className={`container`}>
@@ -150,20 +152,47 @@ function Footer({ footer }) {
           <nav
             className={`col-12 col-md-5 offset-md-1 col-lg-4 offset-lg-2 footer-col-2`}
           >
-            <ul
-              className={`${classes.oFooterList} oFooterMenu _icons-${Footer.showIcon} _dir-${Footer.FooterMenu1_direction}`}
-            >
-              <li className={`aListItem`}>
-                {/* <Link href={footerMenuLink.href}>
-                    <a
-                      target={footerMenuLink.isExternal}
-                      className={`aFooterLink a-fnt-16s`}
-                      rel={`noopener`}
-                    >
-                      {footerMenuLink.label}
-                    </a>
-                  </Link> */}
+            <ul className={`${classes.oFooterList} oFooterMenu`}>
+              <li className={`${classes.aListItem}`}>
+                <Link href={menuLinks[0].fields.link}>
+                  <a
+                    className={`${classes.aFooterLink} a-fnt-16s`}
+                    rel={`noopener`}
+                  >
+                    {menuLinks[0].fields.title}
+                  </a>
+                </Link>
               </li>
+              <li className={`${classes.aListItem}`}>
+                <Link href={menuLinks[1].fields.link}>
+                  <a
+                    className={`${classes.aFooterLink} a-fnt-16s`}
+                    rel={`noopener`}
+                  >
+                    {menuLinks[1].fields.title}
+                  </a>
+                </Link>
+              </li>
+              {/* {menuLinks[1] != null && (
+              )}
+              {menuLinks[2] != null && (
+                <li className={`aListItem`}>
+                  <Link href={menuLinks[2].fields.link}>
+                    <a className={`aFooterLink a-fnt-16s`} rel={`noopener`}>
+                      {menuLinks[2].fields.title}
+                    </a>
+                  </Link>
+                </li>
+              )}
+              {menuLinks[3] != null && (
+                <li className={`aListItem`}>
+                  <Link href={menuLinks[3].fields.link}>
+                    <a className={`aFooterLink a-fnt-16s`} rel={`noopener`}>
+                      {menuLinks[3].fields.title}
+                    </a>
+                  </Link>
+                </li>
+              )} */}
             </ul>
           </nav>
           <div className={`col-12 col-md-3 footer-col-3`}>
