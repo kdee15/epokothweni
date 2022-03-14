@@ -32,6 +32,20 @@
       }
     }
   }
+  .oFooterList {
+    display: block;
+    .aListItem {
+      display: block;
+      width: 100%;
+    }
+    .aFooterLink {
+      color: white;
+      &:hover {
+        color: #e2e2e2;
+      }
+    }
+  }
+
   .mQRCode {
     max-width: 150px;
     margin: 0 auto;
