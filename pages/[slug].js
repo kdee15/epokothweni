@@ -50,9 +50,8 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function RecipeDetails({ page, pageBanner, footer }) {
+export default function DynamicSlug({ page, pageBanner, footer }) {
   const data = page[0].fields;
-  console.log("page", page);
   const rawRichTextField = page[0].fields.body;
   return (
     <div className={`${classes.oSlug} oSlug`}>
