@@ -51,28 +51,34 @@ function LatestPodcast() {
             <p>Have a listen</p>
           </div>
           <div className={`${classes.oColFeatured} col-12 col-md-8 col-lg-6`}>
-            <iframe
+            {/* <iframe
               src="https://open.spotify.com/embed/show/6uYibsPUFb73e4dTFuDQbm?utm_source=generator&theme=0"
               width="100%"
               height="232"
               frameBorder="0"
               allowFullScreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            ></iframe> */}
+
+            <iframe
+              src="https://iframe.iono.fm/c/7223?accent=ff8200&playlist=none&sharing=1"
+              width="100%"
+              height="126"
+              referrerpolicy="origin"
+              frameborder="0"
             ></iframe>
           </div>
         </div>
         <div className={`row`}>
           <div className={`col`}>
             <div className={classes.mPodcastsInfo}>
-              <Link
-                href={`https://open.spotify.com/show/6uYibsPUFb73e4dTFuDQbm`}
-              >
+              <Link href={`https://pod.link/epokothweni`}>
                 <a
                   className={`aBtn a-fnt-16s btnAlt`}
                   target={`_blank`}
                   rel="noopener"
                 >
-                  View episodes on Spotify
+                  View episodes
                 </a>
               </Link>
             </div>
