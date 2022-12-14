@@ -1,7 +1,6 @@
 import classes from "./events.module.scss";
-
 const {
-  C_DELIVERY_KEY,
+  DELIVERY_KEY,
   C_GRAPHQL_URL,
 } = require("../../helpers/contentful-config");
 const { EVENT_CONTENT, EVENT_SLUG } = require("../../helpers/data/events");
@@ -28,7 +27,7 @@ export async function getStaticProps({ params }) {
   const result = await fetch(C_GRAPHQL_URL, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${C_DELIVERY_KEY}`,
+      Authorization: `Bearer ${DELIVERY_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -56,7 +55,7 @@ export async function getStaticPaths() {
   const result = await fetch(C_GRAPHQL_URL, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${C_DELIVERY_KEY}`,
+      Authorization: `Bearer ${DELIVERY_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
