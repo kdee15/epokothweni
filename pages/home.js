@@ -4,8 +4,6 @@ import LatestPodcast from "../components/blocks/latestPodcast/LatestPodcast";
 import ComponentFooter from "../components/blocks/componentFooter/ComponentFooter";
 import ComponentVideoBlock from "../components/blocks/componentVideoBlock/ComponentVideoBlock";
 
-const { C_SPACE_ID, C_DELIVERY_KEY } = require("../helpers/contentful-config");
-
 export default function Recipes({
   footer,
   heroBanner,
@@ -25,8 +23,8 @@ export default function Recipes({
 
 export async function getStaticProps() {
   const client = createClient({
-    space: C_SPACE_ID,
-    accessToken: C_DELIVERY_KEY,
+    space: process.env.C_SPACE_ID,
+    accessToken: process.env.C_DELIVERY_KEY,
   });
 
   const resBanner = await client.getEntries({
