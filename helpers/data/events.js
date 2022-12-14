@@ -4,6 +4,9 @@ export const EVENT_CONTENT = `
       items {
         title
         slug
+        description {
+          json
+        }
       }
     }
   }

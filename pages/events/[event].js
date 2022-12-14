@@ -1,3 +1,4 @@
+import ComponentRichText from "../../components/molecules/componentRichText/ComponentRichText";
 import classes from "./events.module.scss";
 const {
   DELIVERY_KEY,
@@ -17,6 +18,9 @@ export default function Event({ event }) {
   return (
     <div className={classes.oProjectPage}>
       <h1>Hello {event.title}</h1>
+      {event.description ? (
+        <ComponentRichText contentModule={event.description.json} />
+      ) : null}
     </div>
   );
 }

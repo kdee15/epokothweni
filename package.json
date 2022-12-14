@@ -22,6 +22,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@contentful/rich-text-types": "^16.0.2",
     "autoprefixer": "^9.8.8",
     "eslint": "7",
     "eslint-config-next": "12.0.2",
