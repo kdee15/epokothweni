@@ -64,8 +64,8 @@ function LatestPodcast() {
               src="https://iframe.iono.fm/c/7223?accent=ff8200&playlist=none&sharing=1"
               width="100%"
               height="126"
-              referrerpolicy="origin"
-              frameborder="0"
+              referrerPolicy="origin"
+              frameBorder="0"
             ></iframe>
           </div>
         </div>

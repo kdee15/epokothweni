@@ -1,13 +1,12 @@
 import { createClient } from "contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-const { C_SPACE_ID, C_DELIVERY_KEY } = require("../helpers/contentful-config");
 import ComponentFooter from "../components/blocks/componentFooter/ComponentFooter";
 import ComponentPageBanner from "../components/blocks/componentPageBanner/ComponentPageBanner";
 import classes from "../styles/Global.module.scss";
 
 const client = createClient({
-  space: C_SPACE_ID,
-  accessToken: C_DELIVERY_KEY,
+  space: process.env.C_SPACE_ID,
+  accessToken: process.env.C_DELIVERY_KEY,
 });
 
 export const getStaticPaths = async () => {
