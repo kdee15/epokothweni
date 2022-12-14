@@ -7,7 +7,6 @@ function Footer({ footer }) {
   const { logo, qrCode, qrCodeText } = footer;
   const socialLinks = footer.socialMediaLinks;
   const menuLinks = footer.footerMenu;
-  console.log("menuLinks", menuLinks);
 
   return (
     <footer className={classes.oFooter}>
