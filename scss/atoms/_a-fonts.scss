@@ -1,0 +1,73 @@
+// ATOMS [ FONTS ]  ###################################################################################################
+
+// BASE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. FONTS ---------------------------------------------
+
+h1,
+h1 *,
+.fntH1,
+.fntH1 * {
+  font-family: $heading;
+  @include scaledFont(32, 64, 64, normal, normal, normal);
+}
+
+h2,
+h2 *,
+.fntH2,
+.fntH2 * {
+  font-family: $heading;
+  @include scaledFont(32, 64, 64, normal, normal, normal);
+}
+
+h3,
+h3 *,
+.fntH3,
+.fntH3 * {
+  font-family: $heading;
+  @include scaledFont(32, 64, 64, normal, normal, normal);
+}
+
+h4,
+h4 *,
+.fntH4,
+.fntH4 * {
+  font-family: $heading;
+  @include scaledFont(32, 64, 64, normal, normal, normal);
+}
+
+.fnt72f,
+.fnt72f * {
+  @include font(72);
+}
+
+.fnt64,
+.fnt64 * {
+  @include scaledFont(32, 64, 64, normal, normal, normal);
+}
+
+.fnt30f,
+.fnt30f * {
+  @include font(30);
+}
+
+.fnt18f,
+.fnt18f * {
+  @include font(18);
+}
+
+.fnt18,
+.fnt18 * {
+  @include scaledFont(12, 18, 18, normal, normal, normal);
+}
+
+p {
+  @include font(18);
+  letter-spacing: 1px;
+}
+
+// A.1. END -----------------------------------------------
+
+// END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
