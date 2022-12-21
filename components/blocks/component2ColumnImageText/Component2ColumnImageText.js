@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import Image from "next/image";
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import classes from "./Component2ColumnImageText.module.scss";
 
 function Component2ColumnImageText({ contentModule }) {
@@ -25,7 +25,9 @@ function Component2ColumnImageText({ contentModule }) {
           </figure>
           <div className={`${classes.oBlockBody} oBlockBody col-12 col-md-7`}>
             <h2 className={classes.aBlockTitle}>{title}</h2>
-            <ReactMarkdown>{copy}</ReactMarkdown>
+            <div className={classes.aBlockDesc}>
+              {documentToReactComponents(copy)}
+            </div>
           </div>
         </div>
       </div>
