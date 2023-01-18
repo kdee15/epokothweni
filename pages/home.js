@@ -1,10 +1,10 @@
 import { createClient } from "contentful";
 import ComponentHeroBanner from "../components/blocks/componentHeroBanner/ComponentHeroBanner";
-import LatestPodcast from "../components/blocks/latestPodcast/LatestPodcast";
 import ComponentFooter from "../components/blocks/componentFooter/ComponentFooter";
 import ComponentVideoBlock from "../components/blocks/componentVideoBlock/ComponentVideoBlock";
 import ComponentServiceListing from "../components/blocks/componentServiceListing/ComponentServiceListing";
 import Component2ColumnImageText from "../components/blocks/component2ColumnImageText/Component2ColumnImageText";
+import ComponentLatestPodcast from "../components/blocks/componentLatestPodcast/ComponentLatestPodcast";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -44,12 +44,13 @@ export default function Home({ Page, footer, videoBlockEng, videoBlockXho }) {
   const heroBanner = Page[0].fields.components[0].fields;
   const ComponentAbout = Page[0].fields.components[1].fields;
   const componentServiceListing = Page[0].fields.components[2].fields;
+  const componentLatestPodcast = Page[0].fields.components[5].fields;
   return (
     <div>
       <ComponentHeroBanner heroBanner={heroBanner} />
-      <LatestPodcast />
       <Component2ColumnImageText contentModule={ComponentAbout} />
       <ComponentServiceListing contentModule={componentServiceListing} />
+      <ComponentLatestPodcast contentModule={componentLatestPodcast} />
       <ComponentVideoBlock contentModule={videoBlockEng} />
       <ComponentVideoBlock contentModule={videoBlockXho} />
       <ComponentFooter footer={footer} />

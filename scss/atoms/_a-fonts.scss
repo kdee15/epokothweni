@@ -17,7 +17,7 @@ h2 *,
 .fntH2,
 .fntH2 * {
   font-family: $heading;
-  @include scaledFont(32, 64, 64, normal, normal, normal);
+  @include scaledFont(32, 64, 64, 32, 64, 64);
 }
 
 h3,
