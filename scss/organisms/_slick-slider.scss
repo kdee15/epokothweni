@@ -60,6 +60,23 @@
     .aText {
       margin-bottom: 20px;
     }
+    .mText {
+      margin-bottom: 20px;
+      p {
+        margin-bottom: 8px;
+      }
+      a {
+        display: block;
+        margin-bottom: 10px;
+      }
+      ul {
+        text-align: left;
+        margin: 15px 0;
+        * {
+          text-align: left;
+        }
+      }
+    }
     &:nth-child(4n + 1) {
       background-color: #4b2653;
     }

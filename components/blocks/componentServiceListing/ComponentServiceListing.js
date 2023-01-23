@@ -49,9 +49,9 @@ function ComponentServiceListing({ contentModule }) {
             {serviceList.map((service, index) => (
               <div key={index}>
                 <h5 className={`aTitle fnt18f`}>{service.fields.title}</h5>
-                <p className={`aText fnt16f`}>
+                <div className={`mText fnt16f`}>
                   {documentToReactComponents(service.fields.copy)}
-                </p>
+                </div>
               </div>
             ))}
           </Slider>

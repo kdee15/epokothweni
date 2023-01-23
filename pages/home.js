@@ -52,8 +52,8 @@ export default function Home({ Page, footer, videoBlockEng, videoBlockXho }) {
       <ComponentCopy contentModule={ComponentAbout} />
       <ComponentServiceListing contentModule={componentServiceListing} />
       <ComponentLatestPodcast contentModule={componentLatestPodcast} />
-      {/* <ComponentVideoBlock contentModule={videoBlockEng} /> */}
-      {/* <ComponentVideoBlock contentModule={videoBlockXho} /> */}
+      <ComponentVideoBlock contentModule={videoBlockEng} />
+      <ComponentVideoBlock contentModule={videoBlockXho} />
       <ComponentFooter footer={footer} />
     </div>
   );
