@@ -5,6 +5,7 @@ import ComponentVideoBlock from "../components/blocks/componentVideoBlock/Compon
 import ComponentServiceListing from "../components/blocks/componentServiceListing/ComponentServiceListing";
 import Component2ColumnImageText from "../components/blocks/component2ColumnImageText/Component2ColumnImageText";
 import ComponentLatestPodcast from "../components/blocks/componentLatestPodcast/ComponentLatestPodcast";
+import ComponentCopy from "../components/organisms/componentCopy/ComponentCopy";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -14,7 +15,7 @@ export async function getStaticProps() {
 
   const resPage = await client
     .getEntries({
-      content_type: "page",
+      content_type: "pageHomepage",
       include: 10,
     })
 
@@ -44,15 +45,15 @@ export default function Home({ Page, footer, videoBlockEng, videoBlockXho }) {
   const heroBanner = Page[0].fields.components[0].fields;
   const ComponentAbout = Page[0].fields.components[1].fields;
   const componentServiceListing = Page[0].fields.components[2].fields;
-  const componentLatestPodcast = Page[0].fields.components[5].fields;
+  const componentLatestPodcast = Page[0].fields.components[3].fields;
   return (
     <div>
       <ComponentHeroBanner heroBanner={heroBanner} />
-      <Component2ColumnImageText contentModule={ComponentAbout} />
+      <ComponentCopy contentModule={ComponentAbout} />
       <ComponentServiceListing contentModule={componentServiceListing} />
       <ComponentLatestPodcast contentModule={componentLatestPodcast} />
-      <ComponentVideoBlock contentModule={videoBlockEng} />
-      <ComponentVideoBlock contentModule={videoBlockXho} />
+      {/* <ComponentVideoBlock contentModule={videoBlockEng} /> */}
+      {/* <ComponentVideoBlock contentModule={videoBlockXho} /> */}
       <ComponentFooter footer={footer} />
     </div>
   );

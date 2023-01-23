@@ -5,13 +5,17 @@ import classes from "./ComponentLatestPodcast.module.scss";
 
 function ComponentLatestPodcast({ contentModule }) {
   console.log("contentModule", contentModule);
-  const { title, description, image, linkToPodcasts } = contentModule;
+  const { title, description, image, imageText, linkToPodcasts } =
+    contentModule;
   const podcastUrl = contentModule.listing[0].fields;
   console.log("podcastUrl", podcastUrl);
   return (
     <section className={`${classes.oLatestPodcast}`}>
       <div className={`${classes.oContainer} container`}>
         <h2 className={`${classes.aBlockTitle}`}>{title}</h2>
+        <div className={`${classes.mBlockDescription}`}>
+          {documentToReactComponents(description)}
+        </div>
         <div className={`${classes.oRow} row`}>
           <div className={`${classes.oImage} col col-md-4 col-lg-6`}>
             <figure className={`${classes.oBlockImage}`}>
@@ -23,8 +27,8 @@ function ComponentLatestPodcast({ contentModule }) {
                 height={image.fields.file.details.image.height}
               />
             </figure>
-            <div className={`${classes.mDescription}`}>
-              {documentToReactComponents(description)}
+            <div className={`${classes.mImageText}`}>
+              {documentToReactComponents(imageText)}
             </div>
           </div>
           <div className={`${classes.oBody} col col-md-8 col-lg-6`}>

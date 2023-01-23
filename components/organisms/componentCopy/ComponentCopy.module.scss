@@ -1,41 +1,21 @@
 // COMPONENT [ HERO BLOCK ] ###########################################################################################
 @import "scss/.base/module-index";
 
-.oLatestPodcast {
+.oCopyBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
+  padding: 80px 20px 50px;
 
   .aBlockTitle {
     text-align: center;
-    padding: 0 0 20px;
+    width: 100%;
+  }
+  .blockWrapper {
+    position: relative;
   }
 
-  .mBlockDescription {
-    padding: 0 0 80px;
-    text-align: center;
-  }
-
-  .oBlockImage {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .mImageText {
-    text-align: center;
-  }
-
-  .oBody {
-    iframe {
-      width: 100% !important;
-      border: 0;
-    }
-  }
-
-  .mCta {
-    display: block;
-    text-align: center;
-    margin-top: 50px;
+  .oBlockBody {
+    margin: 30px auto 0;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++

@@ -36,7 +36,7 @@ function ComponentServiceListing({ contentModule }) {
   };
 
   return (
-    <footer className={classes.oServicesBlock}>
+    <section className={classes.oServicesBlock}>
       <div className={`container`}>
         <div className={`row`}>
           <h2 className={classes.aBlockTitle}>{title}</h2>
@@ -57,7 +57,7 @@ function ComponentServiceListing({ contentModule }) {
           </Slider>
         </div>
       </div>
-    </footer>
+    </section>
   );
 }
 

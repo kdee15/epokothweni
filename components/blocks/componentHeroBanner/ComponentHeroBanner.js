@@ -1,4 +1,3 @@
-import { createClient } from "contentful";
 import classes from "./ComponentHeroBanner.module.scss";
 import Image from "next/image";
 import React from "react";
