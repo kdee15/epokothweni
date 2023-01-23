@@ -4,11 +4,9 @@ import Link from "next/dist/client/link";
 import classes from "./ComponentLatestPodcast.module.scss";
 
 function ComponentLatestPodcast({ contentModule }) {
-  console.log("contentModule", contentModule);
   const { title, description, image, imageText, linkToPodcasts } =
     contentModule;
   const podcastUrl = contentModule.listing[0].fields;
-  console.log("podcastUrl", podcastUrl);
   return (
     <section className={`${classes.oLatestPodcast}`}>
       <div className={`${classes.oContainer} container`}>
