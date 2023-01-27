@@ -1,5 +1,5 @@
 export const EVENT_CONTENT = `
-  query GetEvents($slug: String!) {
+  query pageEventCollection($slug: String!) {
     eventCollection(where: { slug: $slug }, limit: 1) {
       items {
         title
@@ -14,7 +14,7 @@ export const EVENT_CONTENT = `
 
 export const EVENT_SLUG = `
 query {
-  eventCollection{
+  pageEventCollection{
     items {
       title
       slug

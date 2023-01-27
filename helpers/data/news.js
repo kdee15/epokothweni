@@ -1,6 +1,6 @@
 export const NEWS_CONTENT = `
   query GetNews($slug: String!) {
-    newsCollection(where: { slug: $slug }, limit: 1) {
+    pageNewsCollection(where: { slug: $slug }, limit: 1) {
         items {
             title
             slug
@@ -13,6 +13,8 @@ export const NEWS_CONTENT = `
             copy {
                 json
             }
+            link
+            isFeatured
         }
     }
   }
@@ -20,7 +22,7 @@ export const NEWS_CONTENT = `
 
 export const NEWS_SLUG = `
 query {
-    newsCollection{
+    pageNewsCollection{
     items {
       title
       slug

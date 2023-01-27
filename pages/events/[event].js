@@ -48,7 +48,7 @@ export async function getStaticProps({ params }) {
   }
 
   const { data } = await result.json();
-  const [eventData] = data.eventCollection.items;
+  const [eventData] = data.pageEventCollection.items;
 
   return {
     props: { event: eventData },
@@ -72,7 +72,7 @@ export async function getStaticPaths() {
   }
 
   const { data } = await result.json();
-  const eventSlug = data.eventCollection.items;
+  const eventSlug = data.pageEventCollection.items;
   const paths = eventSlug.map(({ slug }) => {
     return {
       params: { event: slug },

@@ -52,7 +52,7 @@ export async function getStaticProps({ params }) {
   }
 
   const { data } = await result.json();
-  const [newsData] = data.newsCollection.items;
+  const [newsData] = data.pageNewsCollection.items;
 
   return {
     props: { news: newsData },
@@ -76,7 +76,7 @@ export async function getStaticPaths() {
   }
 
   const { data } = await result.json();
-  const newsSlug = data.newsCollection.items;
+  const newsSlug = data.pageNewsCollection.items;
   const paths = newsSlug.map(({ slug }) => {
     return {
       params: { news: slug },
