@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import Link from "next/link";
+import ComponentFooter from "../../components/blocks/componentFooter/ComponentFooter";
 import classes from "./news.module.scss";
 const {
   DELIVERY_KEY,
@@ -14,25 +15,35 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
  * @constructor
  */
 
-export default function News({ News }) {
+export default function News({ News, footer }) {
   return (
     <div className={`${classes.oProjectPage}`}>
       <div className={`${classes.oContainer} container`}>
         <div className={`${classes.oRow} row`}>
           <div className={`${classes.oCol} col`}>
-            <h1>news list</h1>
+            <h1 className={`${classes.aPageTitle}`}>news list</h1>
           </div>
         </div>
         <div className={`${classes.oRow} row`}>
           {News.map((item, index) => (
-            <article className={`${classes.ocol} col-12 col-sm-6`} key={index}>
+            <article
+              className={`${classes.oCardColumn} col-12 col-sm-6`}
+              key={index}
+            >
               <div className={`${classes.oCard}`}>
-                <figure className={`${classes.mCardImage}`}></figure>
+                <figure
+                  className={`${classes.mCardImage}`}
+                  style={{
+                    backgroundImage: `url(http:${item.fields.image.fields.file.url})`,
+                  }}
+                ></figure>
                 <div className={`${classes.mCardBody}`}>
-                  <h5 className={`aTitle fnt18f`}>{item.fields.title}</h5>
+                  <h5 className={`${classes.aTitle} fnt18f`}>
+                    {item.fields.title}
+                  </h5>
                   <div className={`mText fnt16f`}>
                     <Link href={`news/${item.fields.slug}`}>
-                      <a className={`a-fnt-16s`} rel="noopener">
+                      <a className={`aBtn fnt16f`} rel="noopener">
                         View News
                       </a>
                     </Link>
@@ -43,6 +54,7 @@ export default function News({ News }) {
           ))}
         </div>
       </div>
+      <ComponentFooter footer={footer} />
     </div>
   );
 }
