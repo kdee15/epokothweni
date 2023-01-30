@@ -1,24 +1,41 @@
-// COMPONENT [ FOOTER ] ###############################################################################################
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
 @import "scss/.base/module-index";
 
-.oServicesBlock {
+.oLatestPodcast {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
   padding: 50px 0;
 
   .aBlockTitle {
-    margin: 0 auto 20px;
     text-align: center;
+    padding: 0 0 20px;
   }
-  .aBlockDesc {
-    margin: 0 auto 50px;
+
+  .mBlockDescription {
+    padding: 0 0 80px;
     text-align: center;
   }
 
-  .mText {
-    ul {
-      text-align: left;
+  .oBlockImage {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .mImageText {
+    text-align: center;
+  }
+
+  .oBody {
+    iframe {
+      width: 100% !important;
+      border: 0;
     }
+  }
+
+  .mCta {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++

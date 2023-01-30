@@ -1,24 +1,21 @@
-// COMPONENT [ FOOTER ] ###############################################################################################
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
 @import "scss/.base/module-index";
 
-.oServicesBlock {
+.oCopyBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
+  padding: 80px 20px 50px;
 
   .aBlockTitle {
-    margin: 0 auto 20px;
     text-align: center;
+    width: 100%;
   }
-  .aBlockDesc {
-    margin: 0 auto 50px;
-    text-align: center;
+  .blockWrapper {
+    position: relative;
   }
 
-  .mText {
-    ul {
-      text-align: left;
-    }
+  .oBlockBody {
+    margin: 30px auto 0;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++

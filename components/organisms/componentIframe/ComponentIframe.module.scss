@@ -1,24 +1,28 @@
-// COMPONENT [ FOOTER ] ###############################################################################################
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
 @import "scss/.base/module-index";
 
-.oServicesBlock {
+.oVideoBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
-
-  padding: 50px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   .aBlockTitle {
-    margin: 0 auto 20px;
     text-align: center;
+    width: 100%;
   }
-  .aBlockDesc {
-    margin: 0 auto 50px;
-    text-align: center;
+  .blockWrapper {
+    @include aspect-ratio(100%, 56.5%);
+    position: relative;
+    margin: 30px auto 150px;
   }
 
-  .mText {
-    ul {
-      text-align: left;
-    }
+  .mVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
@@ -36,6 +40,15 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($sm-up) {
+    .oContentBlock {
+      .mImage {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .aImage {
+        margin: 20px auto;
+      }
+    }
   }
 
   // C. END +++++++++++++++++++++++++++++++++++++++++++++++

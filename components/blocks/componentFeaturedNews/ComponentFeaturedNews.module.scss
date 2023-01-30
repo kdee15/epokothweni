@@ -1,24 +1,64 @@
 // COMPONENT [ FOOTER ] ###############################################################################################
 @import "scss/.base/module-index";
 
-.oServicesBlock {
+.oFeaturedNewsBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
+  padding: 40px 20px;
+
+  .oCard {
+    position: relative;
+  }
+
+  .mLink {
+    display: block;
+    text-decoration: none;
+    &:hover {
+      background-color: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
 
   .aBlockTitle {
-    margin: 0 auto 20px;
+    width: 100%;
+    display: block;
     text-align: center;
-  }
-  .aBlockDesc {
     margin: 0 auto 50px;
+  }
+
+  .aTitle {
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  .mCardBody {
+    .aTitle {
+      a {
+        text-decoration: none !important;
+        color: #fefefe;
+        &:hover {
+          font-weight: bold;
+          text-shadow: 0 0 10px #eee;
+        }
+      }
+    }
+  }
+
+  .mCardImage {
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mCTA {
     text-align: center;
   }
 
-  .mText {
-    ul {
-      text-align: left;
-    }
+  .aCTA {
+    margin: 50px auto 0;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++

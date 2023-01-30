@@ -1,9 +1,10 @@
-import classes from "./events.module.scss";
+import ComponentRichText from "../../components/molecules/componentRichText/ComponentRichText";
+import classes from "./news.module.scss";
 const {
   DELIVERY_KEY,
   C_GRAPHQL_URL,
 } = require("../../helpers/contentful-config");
-const { EVENT_CONTENT, EVENT_SLUG } = require("../../helpers/data/events");
+const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
 
 /**
  * Initial page load to access users browser information
@@ -12,17 +13,24 @@ const { EVENT_CONTENT, EVENT_SLUG } = require("../../helpers/data/events");
  * @constructor
  */
 
-export default function Event({ event }) {
-  console.log("event", event);
+export default function News({ news }) {
+  console.log("news", news);
   return (
-    <div className={classes.oProjectPage}>
-      <h1>Hello {event.title}</h1>
+    <div className={`${classes.oProjectPage}`}>
+      <div className={`${classes.oContainer} container`}>
+        <div className={`${classes.oRow} row`}>
+          <div className={`${classes.ocol} col-12 offset-md-1 col-md-10`}>
+            <h1>{news.title}</h1>
+          </div>
+        </div>
+      </div>
+      {news.copy ? <ComponentRichText contentModule={news.copy.json} /> : null}
     </div>
   );
 }
 
 export async function getStaticProps({ params }) {
-  const { event } = params;
+  const { news } = params;
 
   const result = await fetch(C_GRAPHQL_URL, {
     method: "POST",
@@ -31,9 +39,9 @@ export async function getStaticProps({ params }) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: EVENT_CONTENT,
+      query: NEWS_CONTENT,
       variables: {
-        slug: event,
+        slug: news,
       },
     }),
   });
@@ -44,10 +52,10 @@ export async function getStaticProps({ params }) {
   }
 
   const { data } = await result.json();
-  const [eventData] = data.eventCollection.items;
+  const [newsData] = data.pageNewsCollection.items;
 
   return {
-    props: { event: eventData },
+    props: { news: newsData },
   };
 }
 
@@ -59,7 +67,7 @@ export async function getStaticPaths() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: EVENT_SLUG,
+      query: NEWS_SLUG,
     }),
   });
 
@@ -68,10 +76,10 @@ export async function getStaticPaths() {
   }
 
   const { data } = await result.json();
-  const eventSlug = data.eventCollection.items;
-  const paths = eventSlug.map(({ slug }) => {
+  const newsSlug = data.pageNewsCollection.items;
+  const paths = newsSlug.map(({ slug }) => {
     return {
-      params: { event: slug },
+      params: { news: slug },
     };
   });
 

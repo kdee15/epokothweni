@@ -1,24 +1,11 @@
-// COMPONENT [ FOOTER ] ###############################################################################################
+// COMPONENT [ RICH TEXT COMPONENT ] ##################################################################################
 @import "scss/.base/module-index";
 
-.oServicesBlock {
+.mBody {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
-
-  .aBlockTitle {
-    margin: 0 auto 20px;
-    text-align: center;
-  }
-  .aBlockDesc {
-    margin: 0 auto 50px;
-    text-align: center;
-  }
-
-  .mText {
-    ul {
-      text-align: left;
-    }
+  p {
+    margin-bottom: 8px;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
