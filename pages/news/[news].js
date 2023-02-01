@@ -1,4 +1,5 @@
 import ComponentRichTextArea from "../../components/organisms/componentRichTextArea/ComponentRichTextArea";
+import Link from "next/link";
 import classes from "./news.module.scss";
 const {
   DELIVERY_KEY,
@@ -23,6 +24,18 @@ export default function News({ news }) {
           <div className={`${classes.ocol} col-12 offset-md-1 col-md-10`}>
             <h1>{news.title}</h1>
             <ComponentRichTextArea contentModule={news.copy} />
+          </div>
+        </div>
+        <div className={`${classes.oRow} row`}>
+          <div className={`${classes.mCTA} col`}>
+            <Link href={`/news`}>
+              <a
+                className={`${classes.aCTA} aBtn a-fnt-16s btnAlt`}
+                rel="noopener"
+              >
+                View all news
+              </a>
+            </Link>
           </div>
         </div>
       </div>
