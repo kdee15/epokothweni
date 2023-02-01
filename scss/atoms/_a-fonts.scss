@@ -33,7 +33,7 @@ h4 *,
 .fntH4,
 .fntH4 * {
   font-family: $heading;
-  @include scaledFont(32, 64, 64, normal, normal, normal);
+  @include scaledFont(24, 32, 32, normal, normal, normal);
 }
 
 .fnt72f,

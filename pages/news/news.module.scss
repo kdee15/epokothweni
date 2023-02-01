@@ -46,6 +46,11 @@
   }
 }
 
+.oVideo {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .mCardImage {
   aspect-ratio: 16/9;
   background-size: cover;
@@ -58,6 +63,11 @@
   .aTitle {
     margin-bottom: 12px;
   }
+}
+
+.mCTA {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 // A.1. END -----------------------------------------------

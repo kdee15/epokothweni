@@ -15,7 +15,7 @@ function ComponentLatestPodcast({ contentModule }) {
           {documentToReactComponents(description)}
         </div>
         <div className={`${classes.oRow} row`}>
-          <div className={`${classes.oImage} col col-md-4 col-lg-6`}>
+          <div className={`${classes.oImage} col-12 col-md-4 col-lg-6`}>
             <figure className={`${classes.oBlockImage}`}>
               <Image
                 className={`${classes.aImage} a-responsive-image`}
@@ -29,7 +29,7 @@ function ComponentLatestPodcast({ contentModule }) {
               {documentToReactComponents(imageText)}
             </div>
           </div>
-          <div className={`${classes.oBody} col col-md-8 col-lg-6`}>
+          <div className={`${classes.oBody} col-12 col-md-8 col-lg-6`}>
             <iframe
               width="560"
               height="126"
