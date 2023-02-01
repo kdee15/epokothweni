@@ -1,21 +1,50 @@
 export const NEWS_CONTENT = `
   query GetNews($slug: String!) {
     pageNewsCollection(where: { slug: $slug }, limit: 1) {
-        items {
-            title
-            slug
-            image {
-                title
-                url
-                width
-                height
-            }
-            copy {
-                json
-            }
-            link
-            isFeatured
-        }
+      items {
+          title
+          slug
+          image {
+              title
+              url
+              width
+              height
+          }
+          copy {
+              json
+              links {
+                entries {
+                  block {
+                    __typename
+                    sys {
+                      id
+                    }
+                    ... on ComponentVideoPlayer {
+                      title
+                      videoUrl
+                    }
+                  }
+                  inline {
+                    sys {
+                      id
+                    }
+                  }
+                }
+                assets {
+                  block {
+                    __typename
+                    url
+                    sys {
+                      id
+                    }
+                  }
+
+                }
+              }
+          }
+          link
+          isFeatured
+      }
     }
   }
 `;
@@ -29,4 +58,27 @@ query {
     }
   }
 }
+`;
+
+export const RICH_CONTENT = `
+  pageNewsCollection(limit: 10) {
+      items {
+          copy {
+              json
+              links {
+                entries {
+                  block {
+                    sys {
+                      id
+                    }
+                    ... on ComponentVideoPlayer {
+                      title
+                      videoUrl
+                    }
+                  }
+                }
+              }
+          }
+      }
+  }
 `;

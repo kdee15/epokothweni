@@ -1,4 +1,4 @@
-import ComponentRichText from "../../components/molecules/componentRichText/ComponentRichText";
+import ComponentRichTextArea from "../../components/organisms/componentRichTextArea/ComponentRichTextArea";
 import classes from "./news.module.scss";
 const {
   DELIVERY_KEY,
@@ -15,16 +15,17 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
 
 export default function News({ news }) {
   console.log("news", news);
+
   return (
     <div className={`${classes.oProjectPage}`}>
       <div className={`${classes.oContainer} container`}>
         <div className={`${classes.oRow} row`}>
           <div className={`${classes.ocol} col-12 offset-md-1 col-md-10`}>
             <h1>{news.title}</h1>
+            <ComponentRichTextArea contentModule={news.copy} />
           </div>
         </div>
       </div>
-      {news.copy ? <ComponentRichText contentModule={news.copy.json} /> : null}
     </div>
   );
 }

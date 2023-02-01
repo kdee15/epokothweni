@@ -23,6 +23,7 @@
 
   .mImageText {
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .oBody {
@@ -53,6 +54,9 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($sm-up) {
+    .mImageText {
+      margin-bottom: 0;
+    }
   }
 
   // C. END +++++++++++++++++++++++++++++++++++++++++++++++

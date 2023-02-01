@@ -1,28 +1,18 @@
 // COMPONENT [ HERO BLOCK ] ###########################################################################################
 @import "scss/.base/module-index";
 
-.oCopyBlock {
+.oRichText {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 80px 20px 50px;
-
-  .aBlockTitle {
-    text-align: center;
-    width: 100%;
-  }
-  .blockWrapper {
-    position: relative;
-  }
-
-  .oBlockBody {
-    margin: 30px auto 0;
-    a {
-      color: white;
-      font-weight: bolder;
-      transition: 0.3s;
-      &:hover {
-        color: $grey;
-        transition: 0.3s;
+  .oVideo {
+    margin-bottom: 50px;
+    .mVideo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      .iFrame {
+        width: 100% !important;
+        height: 100% !important;
       }
     }
   }
