@@ -7,8 +7,13 @@ function ComponentLatestPodcast({ contentModule }) {
   const { title, description, image, imageText, linkToPodcasts } =
     contentModule;
   const podcastUrl = contentModule.listing[0].fields;
+  const { linkAnchor } = contentModule.blockTheme.fields;
+
   return (
     <section className={`${classes.oLatestPodcast}`}>
+      {linkAnchor ? (
+        <div className={`aBlockAnchor`} id={linkAnchor}></div>
+      ) : null}
       <div className={`${classes.oContainer} container`}>
         <h2 className={`${classes.aBlockTitle}`}>{title}</h2>
         <div className={`${classes.mBlockDescription}`}>

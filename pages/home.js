@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import Nav from "../components/molecules/nav/Nav";
 import ComponentHeroBanner from "../components/blocks/componentHeroBanner/ComponentHeroBanner";
 import ComponentServiceListing from "../components/blocks/componentServiceListing/ComponentServiceListing";
 import ComponentLatestPodcast from "../components/blocks/componentLatestPodcast/ComponentLatestPodcast";
@@ -39,12 +40,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ Page, News, footer }) {
-  const heroBanner = Page[0].fields.components[0].fields;
-  const ComponentAbout = Page[0].fields.components[1].fields;
-  const componentServiceListing = Page[0].fields.components[2].fields;
-  const componentLatestPodcast = Page[0].fields.components[3].fields;
+  const navLinks = Page[0].fields.components[0].fields;
+  const heroBanner = Page[0].fields.components[1].fields;
+  const ComponentAbout = Page[0].fields.components[2].fields;
+  const componentServiceListing = Page[0].fields.components[3].fields;
+  const componentLatestPodcast = Page[0].fields.components[4].fields;
+
   return (
     <div>
+      <Nav contentModule={navLinks} />
       <ComponentHeroBanner heroBanner={heroBanner} />
       <ComponentCopy contentModule={ComponentAbout} />
       <ComponentServiceListing contentModule={componentServiceListing} />

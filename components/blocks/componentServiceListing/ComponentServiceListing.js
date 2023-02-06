@@ -6,6 +6,7 @@ import classes from "./ComponentServiceListing.module.scss";
 
 function ComponentServiceListing({ contentModule }) {
   const { title, copy, serviceList } = contentModule;
+  const { fontColor, linkAnchor } = contentModule.blockTheme.fields;
   const settings = {
     dots: true,
     infinite: true,
@@ -37,6 +38,9 @@ function ComponentServiceListing({ contentModule }) {
 
   return (
     <section className={classes.oServicesBlock}>
+      {linkAnchor ? (
+        <div className={`aBlockAnchor`} id={linkAnchor}></div>
+      ) : null}
       <div className={`container`}>
         <div className={`row`}>
           <h2 className={classes.aBlockTitle}>{title}</h2>
