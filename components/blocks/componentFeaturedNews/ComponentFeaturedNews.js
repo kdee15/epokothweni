@@ -5,6 +5,7 @@ function ComponentFeaturedNews({ contentModule }) {
   const { items } = contentModule;
   return (
     <section className={classes.oFeaturedNewsBlock}>
+      <div className={`aBlockAnchor`} id={`latest-news`}></div>
       <div className={`container`}>
         <div className={`row`}>
           <h2 className={classes.aBlockTitle}>Latest News</h2>
