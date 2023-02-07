@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import classes from "../ServicesCarousel/ServicesCarousel.module.scss";
 
 export function ServicesCarousel({ contentModule }) {
-  console.log("contentModule", contentModule);
   const { title, copy, serviceList } = contentModule;
   const settings = {
     dots: true,

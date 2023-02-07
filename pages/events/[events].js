@@ -1,11 +1,11 @@
 import ComponentRichTextArea from "../../components/organisms/componentRichTextArea/ComponentRichTextArea";
 import Link from "next/link";
-import classes from "./news.module.scss";
+import classes from "./events.module.scss";
 const {
   DELIVERY_KEY,
   C_GRAPHQL_URL,
 } = require("../../helpers/contentful-config");
-const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
+const { EVENT_CONTENT, EVENT_SLUG } = require("../../helpers/data/events");
 
 /**
  * Initial page load to access users browser information
@@ -14,24 +14,24 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
  * @constructor
  */
 
-export default function News({ news }) {
+export default function Events({ events }) {
   return (
     <div className={`${classes.oProjectPage}`}>
       <div className={`${classes.oContainer} container`}>
         <div className={`${classes.oRow} row`}>
           <div className={`${classes.ocol} col-12 offset-md-1 col-md-10`}>
-            <h1>{news.title}</h1>
-            <ComponentRichTextArea contentModule={news.copy} />
+            <h1>{events.title}</h1>
+            <ComponentRichTextArea contentModule={events.description} />
           </div>
         </div>
         <div className={`${classes.oRow} row`}>
           <div className={`${classes.mCTA} col`}>
-            <Link href={`/news`}>
+            <Link href={`/events`}>
               <a
                 className={`${classes.aCTA} aBtn a-fnt-16s btnAlt`}
                 rel="noopener"
               >
-                View all news
+                View all events
               </a>
             </Link>
           </div>
@@ -42,7 +42,7 @@ export default function News({ news }) {
 }
 
 export async function getStaticProps({ params }) {
-  const { news } = params;
+  const { events } = params;
 
   const result = await fetch(C_GRAPHQL_URL, {
     method: "POST",
@@ -51,9 +51,9 @@ export async function getStaticProps({ params }) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: NEWS_CONTENT,
+      query: EVENT_CONTENT,
       variables: {
-        slug: news,
+        slug: events,
       },
     }),
   });
@@ -64,10 +64,10 @@ export async function getStaticProps({ params }) {
   }
 
   const { data } = await result.json();
-  const [newsData] = data.pageNewsCollection.items;
+  const [eventData] = data.pageEventCollection.items;
 
   return {
-    props: { news: newsData },
+    props: { events: eventData },
   };
 }
 
@@ -79,7 +79,7 @@ export async function getStaticPaths() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: NEWS_SLUG,
+      query: EVENT_SLUG,
     }),
   });
 
@@ -88,10 +88,10 @@ export async function getStaticPaths() {
   }
 
   const { data } = await result.json();
-  const newsSlug = data.pageNewsCollection.items;
-  const paths = newsSlug.map(({ slug }) => {
+  const eventSlug = data.pageEventCollection.items;
+  const paths = eventSlug.map(({ slug }) => {
     return {
-      params: { news: slug },
+      params: { events: slug },
     };
   });
 

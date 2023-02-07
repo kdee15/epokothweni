@@ -48,7 +48,7 @@ export default function Home({ Page, News, footer }) {
 
   return (
     <div>
-      <Nav contentModule={navLinks} />
+      <Nav contentModule={navLinks} theme="home" />
       <ComponentHeroBanner heroBanner={heroBanner} />
       <ComponentCopy contentModule={ComponentAbout} />
       <ComponentServiceListing contentModule={componentServiceListing} />
