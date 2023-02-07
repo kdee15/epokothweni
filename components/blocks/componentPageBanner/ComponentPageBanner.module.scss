@@ -12,7 +12,11 @@
     overflow: auto;
     max-height: 300px;
     min-height: 150px;
-    text-align: right;
+  }
+
+  .mTitle {
+    position: relative;
+    align-self: center;
   }
 
   .mImage {

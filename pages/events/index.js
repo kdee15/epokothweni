@@ -1,12 +1,12 @@
 import { createClient } from "contentful";
 import Link from "next/link";
 import ComponentFooter from "../../components/blocks/componentFooter/ComponentFooter";
-import classes from "./news.module.scss";
+import classes from "./events.module.scss";
 const {
   DELIVERY_KEY,
   C_GRAPHQL_URL,
 } = require("../../helpers/contentful-config");
-const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
+const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/events");
 
 /**
  * Initial page load to access users browser information
@@ -15,7 +15,7 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
  * @constructor
  */
 
-export default function News({ News, footer }) {
+export default function Events({ Events, footer }) {
   return (
     <div className={`${classes.oProjectPage}`}>
       <div className={`${classes.oContainer} container`}>
@@ -25,24 +25,24 @@ export default function News({ News, footer }) {
           </div>
         </div>
         <div className={`${classes.oRow} row`}>
-          {News.map((item, index) => (
+          {Events.map((item, index) => (
             <article
               className={`${classes.oCardColumn} col-12 col-sm-6`}
               key={index}
             >
               <div className={`${classes.oCard}`}>
-                <figure
+                {/* <figure
                   className={`${classes.mCardImage}`}
                   style={{
                     backgroundImage: `url(http:${item.fields.image.fields.file.url})`,
                   }}
-                ></figure>
+                ></figure> */}
                 <div className={`${classes.mCardBody}`}>
                   <h5 className={`${classes.aTitle} fnt18f`}>
                     {item.fields.title}
                   </h5>
                   <div className={`mText fnt16f`}>
-                    <Link href={`news/${item.fields.slug}`}>
+                    <Link href={`events/${item.fields.slug}`}>
                       <a className={`aBtn fnt16f`} rel="noopener">
                         View News
                       </a>
@@ -67,7 +67,7 @@ export async function getStaticProps() {
 
   const resNews = await client
     .getEntries({
-      content_type: "pageNews",
+      content_type: "pageEvent",
       include: 10,
     })
 
@@ -79,7 +79,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      News: resNews,
+      Events: resNews,
       footer: resFooter.items[0].fields,
     },
     revalidate: 1,

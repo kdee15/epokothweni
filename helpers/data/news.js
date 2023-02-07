@@ -60,25 +60,14 @@ query {
 }
 `;
 
-export const RICH_CONTENT = `
-  pageNewsCollection(limit: 10) {
-      items {
-          copy {
-              json
-              links {
-                entries {
-                  block {
-                    sys {
-                      id
-                    }
-                    ... on ComponentVideoPlayer {
-                      title
-                      videoUrl
-                    }
-                  }
-                }
-              }
-          }
-      }
+export const NEWS_PAGE = `
+query GetNewsIndex($id: String!)  {
+  pageContent ({id: $id})  {
+    title
+    slug
+    sys {
+      id
+    }
   }
+ }
 `;

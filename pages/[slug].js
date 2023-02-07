@@ -54,7 +54,7 @@ export default function DynamicSlug({ page, pageBanner, footer }) {
   const rawRichTextField = page[0].fields.body;
   return (
     <div className={`${classes.oSlug} oSlug`}>
-      <ComponentPageBanner pageBanner={pageBanner} />
+      <ComponentPageBanner contentModule={pageBanner} />
       <div className={`${classes.mSlugHeader} a-fnt-36`}>{data.title}</div>
       <div
         className={`${classes.oContent} oContent`}
