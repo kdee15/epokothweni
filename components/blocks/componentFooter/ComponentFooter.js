@@ -26,172 +26,46 @@ function Footer({ footer }) {
               />
             </figure>
             <ul className={`${classes.oIconList} oFooterMenu`}>
-              <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[0].fields.url}>
-                  <a
-                    target={`_blank`}
-                    className={`${classes.mLink} m-link`}
-                    rel={`noopener`}
-                  >
-                    <figure className={`${classes.mIcon} m-icon`}>
-                      <Image
-                        className={`${classes.aIcon} a-icon`}
-                        src={socialLinks[0].fields.image.fields.file.url}
-                        alt={socialLinks[0].fields.title}
-                        width={`16px`}
-                        height={`16px`}
-                        layout="responsive"
-                      />
-                    </figure>
-                  </a>
-                </Link>
-              </li>
-              <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[1].fields.url}>
-                  <a
-                    target={`_blank`}
-                    className={`${classes.mLink} m-link`}
-                    rel={`noopener`}
-                  >
-                    <figure className={`${classes.mIcon} m-icon`}>
-                      <Image
-                        className={`${classes.aIcon} a-icon`}
-                        src={socialLinks[1].fields.image.fields.file.url}
-                        alt={socialLinks[1].fields.title}
-                        width={`16px`}
-                        height={`16px`}
-                        layout="responsive"
-                      />
-                    </figure>
-                  </a>
-                </Link>
-              </li>
-              <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[2].fields.url}>
-                  <a
-                    target={`_blank`}
-                    className={`${classes.mLink} m-link`}
-                    rel={`noopener`}
-                  >
-                    <figure className={`${classes.mIcon} m-icon`}>
-                      <Image
-                        className={`${classes.aIcon} a-icon`}
-                        src={socialLinks[2].fields.image.fields.file.url}
-                        alt={socialLinks[2].fields.title}
-                        width={`16px`}
-                        height={`16px`}
-                        layout="responsive"
-                      />
-                    </figure>
-                  </a>
-                </Link>
-              </li>
-              <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[3].fields.url}>
-                  <a
-                    target={`_blank`}
-                    className={`${classes.mLink} m-link`}
-                    rel={`noopener`}
-                  >
-                    <figure className={`${classes.mIcon} m-icon`}>
-                      <Image
-                        className={`${classes.aIcon} a-icon`}
-                        src={socialLinks[3].fields.image.fields.file.url}
-                        alt={socialLinks[3].fields.title}
-                        width={`16px`}
-                        height={`16px`}
-                        layout="responsive"
-                      />
-                    </figure>
-                  </a>
-                </Link>
-              </li>
-              <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[4].fields.url}>
-                  <a
-                    target={`_blank`}
-                    className={`${classes.mLink} m-link`}
-                    rel={`noopener`}
-                  >
-                    <figure className={`${classes.mIcon} m-icon`}>
-                      <Image
-                        className={`${classes.aIcon} a-icon`}
-                        src={socialLinks[4].fields.image.fields.file.url}
-                        alt={socialLinks[4].fields.title}
-                        width={`16px`}
-                        height={`16px`}
-                        layout="responsive"
-                      />
-                    </figure>
-                  </a>
-                </Link>
-              </li>
-              <li className={`${classes.mLinkItem} m-link-item`}>
-                <Link href={socialLinks[5].fields.url}>
-                  <a
-                    target={`_blank`}
-                    className={`${classes.mLink} m-link`}
-                    rel={`noopener`}
-                  >
-                    <figure className={`${classes.mIcon} m-icon`}>
-                      <Image
-                        className={`${classes.aIcon} a-icon`}
-                        src={socialLinks[5].fields.image.fields.file.url}
-                        alt={socialLinks[5].fields.title}
-                        width={`16px`}
-                        height={`16px`}
-                        layout="responsive"
-                      />
-                    </figure>
-                  </a>
-                </Link>
-              </li>
+              {socialLinks.map((item, index) => (
+                <li key={index} className={`${classes.mLinkItem} m-link-item`}>
+                  <Link href={item.fields.url}>
+                    <a
+                      target={`_blank`}
+                      className={`${classes.mLink} m-link`}
+                      rel={`noopener`}
+                    >
+                      <figure className={`${classes.mIcon} m-icon`}>
+                        <Image
+                          className={`${classes.aIcon} a-icon`}
+                          src={item.fields.image.fields.file.url}
+                          alt={item.fields.title}
+                          width={`16px`}
+                          height={`16px`}
+                          layout="responsive"
+                        />
+                      </figure>
+                    </a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <nav
             className={`col-12 col-md-5 offset-md-1 col-lg-4 offset-lg-2 footer-col-2`}
           >
             <ul className={`${classes.oFooterList} oFooterMenu`}>
-              <li className={`${classes.aListItem}`}>
-                <Link href={menuLinks[0].fields.link}>
-                  <a
-                    className={`${classes.aFooterLink} a-fnt-16s`}
-                    rel={`noopener`}
-                  >
-                    {menuLinks[0].fields.title}
-                  </a>
-                </Link>
-              </li>
-              <li className={`${classes.aListItem}`}>
-                <Link href={menuLinks[1].fields.link}>
-                  <a
-                    className={`${classes.aFooterLink} a-fnt-16s`}
-                    rel={`noopener`}
-                  >
-                    {menuLinks[1].fields.title}
-                  </a>
-                </Link>
-              </li>
-              {/* {menuLinks[1] != null && (
-              )}
-              {menuLinks[2] != null && (
-                <li className={`aListItem`}>
-                  <Link href={menuLinks[2].fields.link}>
-                    <a className={`aFooterLink a-fnt-16s`} rel={`noopener`}>
-                      {menuLinks[2].fields.title}
+              {menuLinks.map((item, index) => (
+                <li key={index} className={`${classes.aListItem}`}>
+                  <Link href={item.fields.link}>
+                    <a
+                      className={`${classes.aFooterLink} a-fnt-16s`}
+                      rel={`noopener`}
+                    >
+                      {item.fields.title}
                     </a>
                   </Link>
                 </li>
-              )}
-              {menuLinks[3] != null && (
-                <li className={`aListItem`}>
-                  <Link href={menuLinks[3].fields.link}>
-                    <a className={`aFooterLink a-fnt-16s`} rel={`noopener`}>
-                      {menuLinks[3].fields.title}
-                    </a>
-                  </Link>
-                </li>
-              )} */}
+              ))}
             </ul>
           </nav>
           <div className={`col-12 col-md-3 footer-col-3`}>

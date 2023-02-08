@@ -1,4 +1,7 @@
+import { createClient } from "contentful";
 import ComponentRichTextArea from "../../components/organisms/componentRichTextArea/ComponentRichTextArea";
+import Nav from "../../components/molecules/nav/Nav";
+import ComponentFooter from "../../components/blocks/componentFooter/ComponentFooter";
 import Link from "next/link";
 import classes from "./news.module.scss";
 const {
@@ -14,9 +17,13 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
  * @constructor
  */
 
-export default function News({ news }) {
+export default function News({ news, footer, nav }) {
+  console.log("newz", nav);
   return (
     <div className={`${classes.oProjectPage}`}>
+      {nav.title === "Page Main Menu" && (
+        <Nav contentModule={nav} theme="content-page" />
+      )}
       <div className={`${classes.oContainer} container`}>
         <div className={`${classes.oRow} row`}>
           <div className={`${classes.ocol} col-12 offset-md-1 col-md-10`}>
@@ -37,6 +44,7 @@ export default function News({ news }) {
           </div>
         </div>
       </div>
+      <ComponentFooter footer={footer} />
     </div>
   );
 }
@@ -66,8 +74,27 @@ export async function getStaticProps({ params }) {
   const { data } = await result.json();
   const [newsData] = data.pageNewsCollection.items;
 
+  // other kak
+
+  const footerClient = createClient({
+    space: process.env.C_SPACE_ID,
+    accessToken: process.env.C_DELIVERY_KEY,
+  });
+
+  const resFooter = await footerClient.getEntries({
+    content_type: "componentFooter",
+  });
+
+  const resNav = await footerClient.getEntries({
+    content_type: "componentMenu",
+  });
+
   return {
-    props: { news: newsData },
+    props: {
+      news: newsData,
+      footer: resFooter.items[0].fields,
+      nav: resNav.items[0].fields,
+    },
   };
 }
 
