@@ -8,6 +8,7 @@
 
   .oCard {
     position: relative;
+    background-color: #3a3a3a;
   }
 
   .mLink {
@@ -31,25 +32,7 @@
 
   .aTitle {
     text-align: center;
-    margin: 0 auto 20px;
-  }
-
-  .mCardBody {
-    width: 60%;
-    padding: 10px 30px;
-    @include vertical-align(absolute);
-    right: 20px;
-    * {
-      text-decoration: none !important;
-      color: #fefefe;
-    }
-    &:after {
-      content: "";
-      @include position(absolute, 0);
-
-      background-color: rgba(black, 0.6);
-      z-index: -1;
-    }
+    margin: 30px auto 20px;
   }
 
   .mCardImage {
@@ -58,12 +41,16 @@
     background-position: center;
   }
 
+  .mCardBody {
+    padding: 0 15px;
+  }
+
   .mCTA {
     text-align: center;
   }
 
   .aCTA {
-    margin: 50px auto 0;
+    margin: 20px auto;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
@@ -95,6 +82,30 @@
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
   @media ($lg-up) {
+    .mCardBody {
+      width: 60%;
+      padding: 10px 30px;
+      @include vertical-align(absolute);
+      right: 20px;
+      * {
+        text-decoration: none !important;
+        color: #fefefe;
+      }
+      &:after {
+        content: "";
+        @include position(absolute, 0);
+
+        background-color: rgba(black, 0.6);
+        z-index: -1;
+      }
+    }
+    .aTitle {
+      text-align: center;
+      margin: 0 auto 20px;
+    }
+    .aCTA {
+      margin: 50px auto 0;
+    }
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++

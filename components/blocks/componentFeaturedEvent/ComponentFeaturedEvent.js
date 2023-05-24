@@ -17,6 +17,12 @@ function ComponentFeaturedEvents({ contentModule }) {
             .map((item, index) => (
               <div key={index} className={`col-12 offset-md-2 col-md-8`}>
                 <article className={classes.oCard}>
+                  <figure
+                    className={classes.mCardImage}
+                    style={{
+                      backgroundImage: `url(http:${item.fields.image.fields.file.url})`,
+                    }}
+                  ></figure>
                   <div className={classes.mCardBody}>
                     <h3 className={`${classes.aTitle} fnt18f`}>
                       {item.fields.title}
@@ -35,13 +41,6 @@ function ComponentFeaturedEvents({ contentModule }) {
                       </a>
                     </Link>
                   </div>
-
-                  <figure
-                    className={classes.mCardImage}
-                    style={{
-                      backgroundImage: `url(http:${item.fields.image.fields.file.url})`,
-                    }}
-                  ></figure>
                 </article>
               </div>
             ))}
