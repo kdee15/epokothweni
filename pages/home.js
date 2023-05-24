@@ -54,6 +54,8 @@ export default function Home({ Page, News, Events, footer }) {
   const componentServiceListing = Page[0].fields.components[3].fields;
   const componentLatestPodcast = Page[0].fields.components[4].fields;
 
+  console.log("bruuuuu", Events);
+
   return (
     <div>
       <Nav contentModule={navLinks} theme="home" />
@@ -61,8 +63,10 @@ export default function Home({ Page, News, Events, footer }) {
       <ComponentCopy contentModule={ComponentAbout} />
       <ComponentServiceListing contentModule={componentServiceListing} />
       <ComponentLatestPodcast contentModule={componentLatestPodcast} />
-      <ComponentFeaturedNews contentModule={News} />
-      <ComponentFeaturedEvents contentModule={Events} />
+      {News.items.length && <ComponentFeaturedNews contentModule={News} />}
+      {Events.items.length && (
+        <ComponentFeaturedEvents contentModule={Events} />
+      )}
       <ComponentFooter footer={footer} />
     </div>
   );
