@@ -18,7 +18,6 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/news");
  */
 
 export default function News({ news, footer, nav }) {
-  console.log("newz", nav);
   return (
     <div className={`${classes.oProjectPage}`}>
       {nav.title === "Page Main Menu" && (
