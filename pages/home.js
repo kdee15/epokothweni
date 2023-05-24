@@ -5,7 +5,9 @@ import ComponentServiceListing from "../components/blocks/componentServiceListin
 import ComponentLatestPodcast from "../components/blocks/componentLatestPodcast/ComponentLatestPodcast";
 import ComponentCopy from "../components/organisms/componentCopy/ComponentCopy";
 import ComponentFeaturedNews from "../components/blocks/componentFeaturedNews/ComponentFeaturedNews";
+
 import ComponentFooter from "../components/blocks/componentFooter/ComponentFooter";
+import ComponentFeaturedEvents from "../components/blocks/componentFeaturedEvent/ComponentFeaturedEvent";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -25,6 +27,11 @@ export async function getStaticProps() {
     include: 10,
   });
 
+  const resEvents = await client.getEntries({
+    content_type: "pageEvent",
+    include: 10,
+  });
+
   const resFooter = await client.getEntries({
     content_type: "componentFooter",
   });
@@ -33,18 +40,21 @@ export async function getStaticProps() {
     props: {
       Page: resPage,
       News: resNews,
+      Events: resEvents,
       footer: resFooter.items[0].fields,
     },
     revalidate: 1,
   };
 }
 
-export default function Home({ Page, News, footer }) {
+export default function Home({ Page, News, Events, footer }) {
   const navLinks = Page[0].fields.components[0].fields;
   const heroBanner = Page[0].fields.components[1].fields;
   const ComponentAbout = Page[0].fields.components[2].fields;
   const componentServiceListing = Page[0].fields.components[3].fields;
   const componentLatestPodcast = Page[0].fields.components[4].fields;
+
+  console.log("events", Events);
 
   return (
     <div>
@@ -54,6 +64,7 @@ export default function Home({ Page, News, footer }) {
       <ComponentServiceListing contentModule={componentServiceListing} />
       <ComponentLatestPodcast contentModule={componentLatestPodcast} />
       <ComponentFeaturedNews contentModule={News} />
+      <ComponentFeaturedEvents contentModule={Events} />
       <ComponentFooter footer={footer} />
     </div>
   );
