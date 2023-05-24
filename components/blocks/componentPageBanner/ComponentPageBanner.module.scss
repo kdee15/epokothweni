@@ -4,7 +4,7 @@
 .oHeroBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
   background-size: cover;
-  background-position: center;
+  background-position: top left;
   background-repeat: no-repeat;
 
   .oContainer {
@@ -59,6 +59,7 @@
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
   @media ($lg-up) {
+    min-height: 350px;
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++
