@@ -54,8 +54,6 @@ export default function Home({ Page, News, Events, footer }) {
   const componentServiceListing = Page[0].fields.components[3].fields;
   const componentLatestPodcast = Page[0].fields.components[4].fields;
 
-  console.log("bruuuuu", Events);
-
   return (
     <div>
       <Nav contentModule={navLinks} theme="home" />

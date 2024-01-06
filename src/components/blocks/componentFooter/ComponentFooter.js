@@ -21,7 +21,7 @@ function Footer({ footer }) {
                 width={logo.fields.file.details.image.width}
                 height={logo.fields.file.details.image.height}
                 aria-hidden="true"
-                layout="responsive"
+                style={{ objectFit: "contain" }}
                 priority="true"
               />
             </figure>
@@ -45,7 +45,7 @@ function Footer({ footer }) {
                         height={
                           item.fields.image.fields.file.details.image.height
                         }
-                        layout="responsive"
+                        style={{ objectFit: "contain" }}
                       />
                     </figure>
                   </Link>

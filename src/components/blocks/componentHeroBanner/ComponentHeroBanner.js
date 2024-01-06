@@ -25,7 +25,7 @@ function ComponentHeroBanner({ heroBanner }) {
                 width={logo.fields.file.details.image.width}
                 height={logo.fields.file.details.image.height}
                 aria-hidden="true"
-                layout="responsive"
+                style={{ objectFit: "contain" }}
                 priority="true"
               />
             </figure>

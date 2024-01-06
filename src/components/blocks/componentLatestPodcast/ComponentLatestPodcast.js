@@ -25,9 +25,10 @@ function ComponentLatestPodcast({ contentModule }) {
               <Image
                 className={`${classes.aImage} a-responsive-image`}
                 src={image.fields.file.url}
-                alt={``}
+                alt={image.fields.file.title}
                 width={image.fields.file.details.image.width}
                 height={image.fields.file.details.image.height}
+                style={{ objectFit: "contain" }}
               />
             </figure>
             <div className={`${classes.mImageText}`}>
