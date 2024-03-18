@@ -44,7 +44,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ Page, News, Events, footer }) {
+export default function Home({ Page, News, footer }) {
   const navLinks = Page[0].fields.components[0].fields;
   const heroBanner = Page[0].fields.components[1].fields;
   const ComponentAbout = Page[0].fields.components[2].fields;
