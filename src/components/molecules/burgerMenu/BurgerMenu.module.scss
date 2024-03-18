@@ -1,0 +1,119 @@
+// COMPONENT [ BURGER MENU ] ##########################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+// A.1. COMPONENT STYLE -----------------------------------
+
+.mBurger {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  transition: 0.6s;
+  .aBar {
+    position: absolute;
+    @include center-align();
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    &.barOne {
+      top: 5px;
+      transition: 0.3s;
+    }
+    &.barTwo {
+      @include middle-align();
+      &:before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 3px;
+        z-index: 100;
+        transition: 0.3s;
+        opacity: 0;
+      }
+      &:after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 3px;
+        z-index: 100;
+        transition: 0.6s;
+        opacity: 0;
+      }
+    }
+    &.barThree {
+      bottom: 5px;
+      transition: 0.3s;
+    }
+  }
+  &.burgerOn {
+    transition: 0.6s;
+    .aBar {
+      &.barOne,
+      &.barThree {
+        width: 0;
+        transition: 0.3s;
+      }
+      &.barTwo {
+        background-color: transparent;
+        &:before {
+          opacity: 1;
+          transform: rotate(135deg);
+          transition: 0.6s;
+          background-color: black;
+        }
+        &:after {
+          opacity: 1;
+          transform: rotate(45deg);
+          transition: 0.3s;
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+
+// A.1. END -----------------------------------------------
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+@media ($sm-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

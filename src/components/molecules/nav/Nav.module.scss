@@ -1,0 +1,159 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+.navMain {
+  position: relative;
+  z-index: 100;
+  .mNavMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: 0.3s;
+    opacity: 1;
+    &.navOpen {
+      background-color: white;
+      transform: translateY(0%);
+      opacity: 1;
+      transition: 0.3s;
+    }
+    &.navClosed {
+      opacity: 0;
+    }
+  }
+  &.content-page {
+    position: relative;
+    .mMenu {
+      &.desk {
+        background-color: #4d4d4d;
+        margin: 0;
+        padding: 0 20px;
+      }
+    }
+  }
+  &.home {
+    position: fixed;
+    width: 100%;
+    background-color: #4d4d4d;
+    box-shadow: 0 0 5px black;
+  }
+}
+
+.mMenu {
+  display: block;
+  margin: 0 80px 0 auto;
+  text-align: right;
+  .navLink {
+    display: inline-block;
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: 10px;
+      width: 0;
+      content: "";
+      height: 2px;
+      background-color: #000;
+      @include center-align();
+      transition: 0.3s;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.aLink {
+  margin: 15px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+.burgerWrapper {
+  cursor: pointer;
+  position: fixed;
+  z-index: 10;
+  top: 10px;
+  right: 10px;
+}
+.mNavBurger {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+  .navMain {
+    .mNavMobile {
+      height: 100vh;
+    }
+  }
+
+  .mMenu {
+    margin: 50px auto;
+    padding: 0;
+    text-align: center;
+    .navLink {
+      display: block;
+    }
+  }
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+  .aLink {
+    font-size: 12px;
+    margin: 15px 5px;
+  }
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+  .aLink {
+    font-size: 12px;
+    margin: 15px 5px;
+  }
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+  .aLink {
+    font-size: 14px;
+    margin: 15px 10px;
+  }
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1400px +++++++++++++++++++++++++++++++++
+
+@media ($xxl-up) {
+  .aLink {
+    font-size: 16px;
+    margin: 15px;
+  }
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,80 @@
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+.oLatestPodcast {
+  // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+  padding: 50px 0;
+
+  .aBlockTitle {
+    text-align: center;
+    padding: 0 0 20px;
+  }
+
+  .mBlockDescription {
+    padding: 0 0 80px;
+    text-align: center;
+  }
+
+  .oBlockImage {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .mImageText {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .oBody {
+    iframe {
+      width: 100% !important;
+      border: 0;
+    }
+  }
+
+  .mCta {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  // A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+  @media ($md-dn) {
+  }
+
+  @media ($sm-dn) {
+  }
+
+  // B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+  @media ($sm-up) {
+    .mImageText {
+      margin-bottom: 0;
+    }
+  }
+
+  // C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+  @media ($md-up) {
+  }
+
+  // D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+  @media ($lg-up) {
+  }
+
+  // E. END +++++++++++++++++++++++++++++++++++++++++++++++
+}
+
+// END OF FILE ########################################################################################################
