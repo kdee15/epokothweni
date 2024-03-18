@@ -8,7 +8,6 @@
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
-  min-height: 100vh;
 
   // .aBackgroundBlock {
   //   @include position(absolute, 0);
@@ -16,8 +15,7 @@
   // }
 
   .oContentRow {
-    max-height: 600px;
-    @include aspect-ratio(auto, 56.5%);
+    min-height: 100vh;
   }
   .oContentBlock {
     align-self: center;
