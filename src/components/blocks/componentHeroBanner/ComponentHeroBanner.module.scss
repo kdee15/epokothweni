@@ -4,9 +4,16 @@
 
 .oHeroBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+  position: relative;
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
+  min-height: 100vh;
+
+  // .aBackgroundBlock {
+  //   @include position(absolute, 0);
+  //   background-image: linear-gradient($purple, rgba($purple, 0));
+  // }
 
   .oContentRow {
     max-height: 600px;
@@ -16,7 +23,7 @@
     align-self: center;
     .mImage {
       max-width: 50%;
-      margin: 0 0 0 auto;
+      margin: 0 auto;
     }
     .aImage {
       margin: 0 0 50px auto;
@@ -24,12 +31,6 @@
     }
     .aText {
       text-align: center;
-    }
-  }
-
-  .dog-turd {
-    p {
-      color: red !important;
     }
   }
 
