@@ -6,6 +6,7 @@ import classes from "./ComponentHeroBanner.module.scss";
 
 function ComponentHeroBanner({ heroBanner }) {
   const logoImage = useRef(null);
+  const refBackground = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -20,17 +21,19 @@ function ComponentHeroBanner({ heroBanner }) {
     });
 
     timeline.to(logoImage.current, { height: "200px", opacity: "0" }, 0);
+    timeline.to(refBackground.current, { opacity: "0" }, 0);
   }, []);
 
   const { description, image, logo, theme } = heroBanner;
   return (
-    <section
-      className={`${classes.oHeroBlock} hero__${theme}`}
-      style={{
-        backgroundImage: `url(http:${image?.fields?.file?.url})`,
-      }}
-    >
-      <div className={`${classes.aBackgroundBlock}`}></div>
+    <section className={`${classes.oHeroBlock} hero__${theme}`}>
+      <div
+        ref={refBackground}
+        className={`${classes.aBackgroundBlock}`}
+        style={{
+          backgroundImage: `url(http:${image?.fields?.file?.url})`,
+        }}
+      ></div>
       <div className={`container`}>
         <div className={`${classes.oContentRow} row`}>
           <div className={`${classes.oContentBlock} col-12`}>

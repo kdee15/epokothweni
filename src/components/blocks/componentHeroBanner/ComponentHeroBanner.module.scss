@@ -9,10 +9,11 @@
   background-position: top left;
   background-repeat: no-repeat;
 
-  // .aBackgroundBlock {
-  //   @include position(absolute, 0);
-  //   background-image: linear-gradient($purple, rgba($purple, 0));
-  // }
+  .aBackgroundBlock {
+    @include position(fixed, 0);
+    background-size: cover;
+    background-position: center;
+  }
 
   .oContentRow {
     min-height: 100vh;

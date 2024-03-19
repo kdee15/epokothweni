@@ -7,6 +7,22 @@
 
   padding: 50px 0;
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .aBackground {
+    @include position(absolute, 0);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 0.3;
+  }
+
+  .oContainer {
+    position: relative;
+    z-index: 1;
+  }
 
   .aBlockTitle {
     text-align: center;
