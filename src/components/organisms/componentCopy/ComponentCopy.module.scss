@@ -5,15 +5,20 @@
 .oCopyBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 80px 20px 50px;
-  min-height: 100vh;
-
   .aBlockTitle {
     text-align: center;
     width: 100%;
   }
   .blockWrapper {
     position: relative;
+  }
+
+  .mWrapper {
+    padding: 80px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
   }
 
   .oBlockBody {

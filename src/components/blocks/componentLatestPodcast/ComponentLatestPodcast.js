@@ -4,8 +4,14 @@ import Link from "next/link";
 import classes from "./ComponentLatestPodcast.module.scss";
 
 function ComponentLatestPodcast({ contentModule }) {
-  const { title, description, image, imageText, linkToPodcasts } =
-    contentModule;
+  const {
+    title,
+    description,
+    image,
+    imageText,
+    linkToPodcasts,
+    backgroundImage,
+  } = contentModule;
   const podcastUrl = contentModule.listing[0].fields;
   const { linkAnchor } = contentModule.blockTheme.fields;
 
@@ -14,6 +20,7 @@ function ComponentLatestPodcast({ contentModule }) {
       {linkAnchor ? (
         <div className={`aBlockAnchor`} id={linkAnchor}></div>
       ) : null}
+
       <div className={`${classes.oContainer} container`}>
         <h2 className={`${classes.aBlockTitle}`}>{title}</h2>
         <div className={`${classes.mBlockDescription}`}>
@@ -56,6 +63,12 @@ function ComponentLatestPodcast({ contentModule }) {
           </Link>
         </div>
       </div>
+      <div
+        className={`${classes.aBackground}`}
+        style={{
+          backgroundImage: `url(http:${backgroundImage?.fields?.file?.url})`,
+        }}
+      ></div>
     </section>
   );
 }

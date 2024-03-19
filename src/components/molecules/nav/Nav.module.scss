@@ -56,7 +56,7 @@
       width: 0;
       content: "";
       height: 2px;
-      background-color: #000;
+      background-color: white;
       @include center-align();
       transition: 0.3s;
     }
@@ -72,7 +72,7 @@
 .aLink {
   margin: 15px;
   display: block;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .burgerWrapper {
